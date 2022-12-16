@@ -11,3 +11,8 @@ input_list = [12, 13, 21, 31, 14]
 @pytest.mark.parametrize("list_element", input_list)
 def test_palendrome_should_return_false_with_two_non_matching_digits(list_element):
     assert palendrome(list_element) == False
+
+input_list = [11, 22, 44, 66, 88]
+@pytest.mark.parametrize("list_element", input_list)
+def test_palendrome_should_return_true_with_two_matching_digits(list_element):
+    assert palendrome(list_element) == True
