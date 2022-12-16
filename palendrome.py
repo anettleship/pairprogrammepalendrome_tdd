@@ -1,4 +1,7 @@
 def palendrome(inputstring):
-    if inputstring > 9:
+    if 10 < inputstring < 100:
         return inputstring%11 == 0
-    return True
+    elif 100 <= inputstring:
+        return inputstring // 100 == inputstring % 10
+    else:
+        return True

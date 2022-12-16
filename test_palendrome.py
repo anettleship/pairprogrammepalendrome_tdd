@@ -16,3 +16,8 @@ input_list = [11, 22, 44, 66, 88]
 @pytest.mark.parametrize("list_element", input_list)
 def test_palendrome_should_return_true_with_two_matching_digits(list_element):
     assert palendrome(list_element) == True
+
+input_list = [121, 232, 454, 767, 898]
+@pytest.mark.parametrize("list_element", input_list)
+def test_palendroime_should_return_true_with_three_digits_first_and_last_matching(list_element):
+    assert palendrome(list_element) == True
