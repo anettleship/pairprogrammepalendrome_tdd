@@ -1,4 +1,4 @@
-from palendrome import palendrome
+from palendrome import palendrome, get_magnitude
 import pytest
 
 
@@ -62,3 +62,15 @@ input_list = [12111, 23213, 45334, 76481, 82593]
 @pytest.mark.parametrize("list_element", input_list)
 def test_palendrome_should_return_false_with_five_digits_middle_pair_digits_not_matching(list_element):
     assert palendrome(list_element) == False
+
+
+input_list = [11111, 23232, 45354, 88488, 82528]
+@pytest.mark.parametrize("list_element", input_list)
+def test_palendrome_should_return_true_with_five_digits_first_and_last_matching_middle_pair_matching(list_element):
+    assert palendrome(list_element) == True 
+
+
+input_list = [1,5,9]
+@pytest.mark.parametrize("list_element", input_list)
+def test_get_magnitude_should_return_one_for_numbers_less_than_ten(list_element):
+    assert get_magnitude(list_element) == 1
