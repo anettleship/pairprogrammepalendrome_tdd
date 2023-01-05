@@ -1,7 +1,7 @@
-def palendrome(inputstring):
-    if 10 < inputstring < 100:
-        return inputstring%11 == 0
-    elif 100 <= inputstring:
-        return inputstring // 100 == inputstring % 10
+def palendrome(input_int):
+    if 10 < input_int < 100:
+        return input_int%11 == 0
+    elif 100 <= input_int:
+        return input_int // 100 == input_int % 10
     else:
         return True
