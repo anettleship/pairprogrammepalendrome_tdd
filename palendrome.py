@@ -14,5 +14,11 @@ def palendrome(input_int):
 
 
 def get_magnitude(num):
-    
     return 10 ** int(math.log10(num))
+
+# Base case, input is null or <10
+
+# Otherwise:
+    # Find order of magnitude
+    # Remove first and last digits
+    # AND comparison of first and last digits with result of sending remaining digits to recursive call
