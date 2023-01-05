@@ -72,5 +72,11 @@ def test_palendrome_should_return_true_with_five_digits_first_and_last_matching_
 
 input_list = [1,5,9]
 @pytest.mark.parametrize("list_element", input_list)
-def test_get_magnitude_should_return_one_for_numbers_less_than_ten(list_element):
+def test_get_magnitude_should_return_one_for_numbers_one_to_nine(list_element):
     assert get_magnitude(list_element) == 1
+    
+
+input_list = [10,50,99]
+@pytest.mark.parametrize("list_element", input_list)
+def test_get_magnitude_should_return_ten_for_numbers_ten_to_ninety_nine(list_element):
+    assert get_magnitude(list_element) == 10
