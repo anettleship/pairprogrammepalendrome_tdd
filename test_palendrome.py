@@ -80,3 +80,9 @@ input_list = [10,50,99]
 @pytest.mark.parametrize("list_element", input_list)
 def test_get_magnitude_should_return_ten_for_numbers_ten_to_ninety_nine(list_element):
     assert get_magnitude(list_element) == 10
+
+
+input_list = [1111111111111111111111, 232323232, 7453547, 9999884889999, 1111182552811111]
+@pytest.mark.parametrize("list_element", input_list)
+def test_palendrome_should_return_true_for_example_palendromes(list_element):
+    assert palendrome(list_element) == True 
