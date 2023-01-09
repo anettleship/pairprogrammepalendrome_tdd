@@ -86,3 +86,9 @@ input_list = [1111111111111111111111, 232323232, 7453547, 9999884889999, 1111182
 @pytest.mark.parametrize("list_element", input_list)
 def test_palendrome_should_return_true_for_example_palendromes(list_element):
     assert palendrome(list_element) == True 
+
+
+input_list = [-111111111111112, -9.8, -9988, 10.02]
+@pytest.mark.parametrize("list_element", input_list)
+def test_palendrome_should_return_false_for_known_edge_cases(list_element):
+    assert palendrome(list_element) == False 
